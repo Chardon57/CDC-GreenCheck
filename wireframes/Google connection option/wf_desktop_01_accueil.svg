@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg" width="1280" height="820" font-family="Arial, Helvetica, sans-serif">
+  <title>Wireframe Desktop — Page 1 : Accueil / Connexion</title>
+  <rect width="1280" height="820" fill="#E8E4DC"/>
+  <!-- Browser chrome -->
+  <rect x="0" y="0" width="1280" height="40" fill="#DDDDDD"/>
+  <circle cx="20" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="40" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="60" cy="20" r="6" fill="#BBBBBB"/>
+  <rect x="200" y="10" width="720" height="20" rx="4" fill="#EEEEEE"/>
+  <rect x="440" y="16" width="240" height="8" rx="2" fill="#CCCCCC"/>
+
+  <!-- Navbar -->
+  <rect x="0" y="40" width="1280" height="56" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="40" y="54" width="120" height="16" rx="3" fill="#AAAAAA"/>
+  <!-- Nav links -->
+  <rect x="460" y="57" width="60" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="540" y="57" width="70" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="630" y="57" width="60" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="710" y="57" width="80" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="1100" y="50" width="140" height="30" rx="6" fill="#333"/>
+  <rect x="1140" y="61" width="60" height="8" rx="2" fill="white"/>
+
+  <!-- Hero split layout -->
+  <rect x="40" y="120" width="580" height="440" rx="14" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="5,4"/>
+  <circle cx="330" cy="210" r="44" fill="#CCCCCC"/>
+  <rect x="130" y="268" width="400" height="18" rx="4" fill="#888"/>
+  <rect x="80" y="296" width="500" height="12" rx="3" fill="#CCCCCC"/>
+  <rect x="110" y="316" width="440" height="12" rx="3" fill="#CCCCCC"/>
+  <text x="330" y="380" text-anchor="middle" font-size="13" fill="#999">Slogan / description courte de l'application</text>
+  <!-- Feature list in hero -->
+  <rect x="80" y="400" width="20" height="20" rx="4" fill="#CCCCCC"/>
+  <rect x="110" y="404" width="200" height="10" rx="2" fill="#AAAAAA"/>
+  <rect x="80" y="432" width="20" height="20" rx="4" fill="#CCCCCC"/>
+  <rect x="110" y="436" width="240" height="10" rx="2" fill="#AAAAAA"/>
+  <rect x="80" y="464" width="20" height="20" rx="4" fill="#CCCCCC"/>
+  <rect x="110" y="468" width="180" height="10" rx="2" fill="#AAAAAA"/>
+  <rect x="80" y="500" width="160" height="36" rx="8" fill="#333"/>
+  <rect x="112" y="513" width="96" height="10" rx="2" fill="white"/>
+
+  <!-- Form colonne droite -->
+  <rect x="660" y="96" width="420" height="490" rx="14" fill="white" stroke="#DDDDDD" stroke-width="1"/>
+  <rect x="700" y="130" width="260" height="16" rx="3" fill="#888"/>
+  <rect x="700" y="158" width="90" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="700" y="174" width="340" height="40" rx="8" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="700" y="226" width="90" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="700" y="242" width="340" height="40" rx="8" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="780" y="286" width="100" height="8" rx="2" fill="#DDDDDD"/>
+  <rect x="700" y="304" width="340" height="44" rx="8" fill="#333"/>
+  <rect x="800" y="319" width="140" height="12" rx="2" fill="white"/>
+  <text x="870" y="362" text-anchor="middle" font-size="11" fill="#999">Se connecter</text>
+  <line x1="730" y1="380" x2="830" y2="380" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="870" y="383" text-anchor="middle" font-size="12" fill="#BBBBBB">ou</text>
+  <line x1="910" y1="380" x2="1010" y2="380" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="700" y="392" width="340" height="44" rx="8" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="790" y="407" width="180" height="10" rx="2" fill="#CCCCCC"/>
+  <text x="870" y="450" text-anchor="middle" font-size="11" fill="#999">Connexion SSO / Google</text>
+  <rect x="760" y="466" width="220" height="9" rx="2" fill="#DDDDDD"/>
+  <text x="870" y="492" text-anchor="middle" font-size="11" fill="#AAAAAA">Mot de passe oublié · Créer un compte</text>
+  <!-- Trust badges -->
+  <rect x="700" y="516" width="100" height="40" rx="6" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="820" y="516" width="100" height="40" rx="6" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="940" y="516" width="100" height="40" rx="6" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+
+  <!-- Footer -->
+  <rect x="0" y="756" width="1280" height="64" fill="#E8E4DC"/>
+  <rect x="40" y="774" width="100" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="560" y="774" width="60" height="10" rx="2" fill="#DDDDDD"/>
+  <rect x="640" y="774" width="60" height="10" rx="2" fill="#DDDDDD"/>
+  <rect x="720" y="774" width="60" height="10" rx="2" fill="#DDDDDD"/>
+
+  <text x="640" y="800" text-anchor="middle" font-size="11" fill="#AAAAAA">Desktop — 1/5 · Accueil / Connexion</text>
+</svg>

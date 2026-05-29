@@ -1,0 +1,114 @@
+<svg viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg" width="1280" height="820" font-family="Arial, Helvetica, sans-serif">
+  <title>Wireframe Desktop — Page 4 : Résultat &amp; PDF</title>
+  <rect width="1280" height="820" fill="#E8E4DC"/>
+  <!-- Browser -->
+  <rect x="0" y="0" width="1280" height="40" fill="#DDDDDD"/>
+  <circle cx="20" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="40" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="60" cy="20" r="6" fill="#BBBBBB"/>
+  <rect x="200" y="10" width="720" height="20" rx="4" fill="#EEEEEE"/>
+  <rect x="440" y="16" width="240" height="8" rx="2" fill="#CCCCCC"/>
+  <!-- Navbar -->
+  <rect x="0" y="40" width="1280" height="56" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="40" y="54" width="120" height="16" rx="3" fill="#AAAAAA"/>
+  <polyline points="200,62 193,68 200,74" fill="none" stroke="#888" stroke-width="2"/>
+  <rect x="212" y="60" width="80" height="12" rx="2" fill="#CCCCCC"/>
+  <circle cx="1220" cy="68" r="16" fill="#DDDDDD"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="96" width="220" height="660" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="20" y="120" width="10" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="40" y="122" width="120" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="20" y="148" width="10" height="10" rx="2" fill="#333"/>
+  <rect x="40" y="150" width="140" height="9" rx="2" fill="#333"/>
+  <rect x="20" y="176" width="10" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="40" y="178" width="110" height="9" rx="2" fill="#CCCCCC"/>
+
+  <!-- Header résultat -->
+  <rect x="260" y="110" width="980" height="90" rx="12" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="278" y="124" width="90" height="62" rx="6" fill="#DDDDDD"/>
+  <rect x="382" y="128" width="240" height="13" rx="2" fill="#888"/>
+  <rect x="382" y="148" width="200" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="382" y="164" width="280" height="10" rx="2" fill="#CCCCCC"/>
+  <!-- Badges droite -->
+  <rect x="800" y="128" width="110" height="24" rx="12" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="818" y="136" width="74" height="8" rx="2" fill="#CCCCCC"/>
+  <rect x="924" y="128" width="90" height="24" rx="12" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="940" y="136" width="58" height="8" rx="2" fill="#CCCCCC"/>
+  <rect x="1028" y="128" width="100" height="24" rx="12" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="1046" y="136" width="64" height="8" rx="2" fill="#CCCCCC"/>
+  <!-- Statut -->
+  <rect x="800" y="162" width="80" height="22" rx="4" fill="#333"/>
+  <rect x="812" y="169" width="56" height="8" rx="2" fill="white"/>
+
+  <!-- Layout 3 colonnes -->
+  <!-- Col 1 : scores -->
+  <text x="260" y="228" font-size="12" fill="#999" letter-spacing="1.2">SCORES DE CONFIANCE</text>
+  <rect x="260" y="240" width="300" height="340" rx="12" fill="white" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="280" y="262" width="140" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="440" y="262" width="40" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="280" y="278" width="260" height="12" rx="6" fill="#EEEEEE"/>
+  <rect x="280" y="278" width="221" height="12" rx="6" fill="#888"/>
+
+  <rect x="280" y="308" width="120" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="440" y="308" width="40" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="280" y="324" width="260" height="12" rx="6" fill="#EEEEEE"/>
+  <rect x="280" y="324" width="170" height="12" rx="6" fill="#AAAAAA"/>
+
+  <rect x="280" y="354" width="160" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="440" y="354" width="40" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="280" y="370" width="260" height="12" rx="6" fill="#EEEEEE"/>
+  <rect x="280" y="370" width="120" height="12" rx="6" fill="#BBBBBB"/>
+
+  <rect x="280" y="400" width="100" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="440" y="400" width="40" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="280" y="416" width="260" height="12" rx="6" fill="#EEEEEE"/>
+  <rect x="280" y="416" width="78" height="12" rx="6" fill="#CCCCCC"/>
+
+  <rect x="280" y="446" width="130" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="440" y="446" width="40" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="280" y="462" width="260" height="12" rx="6" fill="#EEEEEE"/>
+  <rect x="280" y="462" width="52" height="12" rx="6" fill="#DDDDDD"/>
+
+  <!-- Col 2 : détails -->
+  <text x="590" y="228" font-size="12" fill="#999" letter-spacing="1.2">DÉTAILS &amp; OBSERVATIONS</text>
+  <rect x="590" y="240" width="360" height="340" rx="12" fill="white" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="610" y="262" width="320" height="11" rx="2" fill="#888"/>
+  <rect x="610" y="280" width="304" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="610" y="296" width="290" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="610" y="312" width="310" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="610" y="328" width="260" height="9" rx="2" fill="#DDDDDD"/>
+  <rect x="610" y="344" width="280" height="9" rx="2" fill="#DDDDDD"/>
+  <rect x="610" y="360" width="240" height="9" rx="2" fill="#DDDDDD"/>
+  <!-- Section notes -->
+  <line x1="610" y1="382" x2="930" y2="382" stroke="#EEEEEE" stroke-width="0.5"/>
+  <rect x="610" y="394" width="120" height="9" rx="2" fill="#888"/>
+  <rect x="610" y="410" width="300" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="610" y="426" width="270" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="610" y="442" width="240" height="9" rx="2" fill="#DDDDDD"/>
+
+  <!-- Col 3 : PDF + actions -->
+  <text x="990" y="228" font-size="12" fill="#999" letter-spacing="1.2">RAPPORT PDF</text>
+  <rect x="990" y="240" width="250" height="200" rx="12" fill="white" stroke="#CCCCCC" stroke-width="0.5" stroke-dasharray="5,4"/>
+  <!-- PDF icon grand -->
+  <rect x="1076" y="262" width="60" height="76" rx="6" fill="none" stroke="#AAAAAA" stroke-width="2"/>
+  <text x="1106" y="296" text-anchor="middle" font-size="12" fill="#AAAAAA">PDF</text>
+  <rect x="1082" y="322" width="48" height="8" rx="2" fill="#DDDDDD"/>
+  <rect x="1010" y="354" width="210" height="10" rx="2" fill="#888"/>
+  <rect x="1030" y="370" width="170" height="8" rx="2" fill="#CCCCCC"/>
+  <rect x="1010" y="390" width="210" height="34" rx="8" fill="#333"/>
+  <rect x="1058" y="401" width="114" height="10" rx="2" fill="white"/>
+
+  <!-- Actions -->
+  <rect x="990" y="458" width="250" height="44" rx="10" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="1030" y="474" width="170" height="10" rx="2" fill="#CCCCCC"/>
+  <text x="1115" y="514" text-anchor="middle" font-size="10" fill="#AAA">Nouvelle analyse</text>
+
+  <rect x="990" y="514" width="250" height="44" rx="10" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="1030" y="530" width="170" height="10" rx="2" fill="#CCCCCC"/>
+  <text x="1115" y="570" text-anchor="middle" font-size="10" fill="#AAA">Voir l'historique</text>
+
+  <!-- Footer -->
+  <rect x="0" y="756" width="1280" height="64" fill="#E8E4DC"/>
+  <text x="640" y="800" text-anchor="middle" font-size="11" fill="#AAAAAA">Desktop — 4/5 · Résultat &amp; PDF</text>
+</svg>

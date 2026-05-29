@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1280 820" xmlns="http://www.w3.org/2000/svg" width="1280" height="820" font-family="Arial, Helvetica, sans-serif">
+  <title>Wireframe Desktop — Page 3 : Analyse d'image</title>
+  <rect width="1280" height="820" fill="#E8E4DC"/>
+  <!-- Browser -->
+  <rect x="0" y="0" width="1280" height="40" fill="#DDDDDD"/>
+  <circle cx="20" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="40" cy="20" r="6" fill="#BBBBBB"/>
+  <circle cx="60" cy="20" r="6" fill="#BBBBBB"/>
+  <rect x="200" y="10" width="720" height="20" rx="4" fill="#EEEEEE"/>
+  <rect x="440" y="16" width="240" height="8" rx="2" fill="#CCCCCC"/>
+  <!-- Navbar -->
+  <rect x="0" y="40" width="1280" height="56" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="40" y="54" width="120" height="16" rx="3" fill="#AAAAAA"/>
+  <polyline points="200,62 193,68 200,74" fill="none" stroke="#888" stroke-width="2"/>
+  <rect x="212" y="60" width="80" height="12" rx="2" fill="#CCCCCC"/>
+  <circle cx="1220" cy="68" r="16" fill="#DDDDDD"/>
+
+  <!-- Sidebar gauche -->
+  <rect x="0" y="96" width="220" height="724" fill="#F0EDE6" stroke="#DDDDDD" stroke-width="0.5"/>
+  <rect x="20" y="120" width="10" height="10" rx="2" fill="#333"/>
+  <rect x="40" y="122" width="120" height="9" rx="2" fill="#333"/>
+  <rect x="20" y="148" width="10" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="40" y="150" width="100" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="20" y="176" width="10" height="10" rx="2" fill="#CCCCCC"/>
+  <rect x="40" y="178" width="110" height="9" rx="2" fill="#CCCCCC"/>
+
+  <!-- Zone centrale : caméra -->
+  <text x="260" y="120" font-size="12" fill="#999" letter-spacing="1.2">CAPTURE / IMPORT</text>
+  <rect x="260" y="132" width="560" height="380" rx="14" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="5,4"/>
+  <!-- Camera icon -->
+  <rect x="506" y="220" width="80" height="64" rx="10" fill="none" stroke="#AAAAAA" stroke-width="2.5"/>
+  <circle cx="546" cy="252" r="20" fill="none" stroke="#AAAAAA" stroke-width="2.5"/>
+  <circle cx="546" cy="252" r="8" fill="#CCCCCC"/>
+  <rect x="430" y="302" width="240" height="11" rx="2" fill="#CCCCCC"/>
+  <rect x="410" y="320" width="280" height="9" rx="2" fill="#DDDDDD"/>
+  <!-- Buttons -->
+  <rect x="400" y="344" width="140" height="40" rx="8" fill="#333"/>
+  <rect x="430" y="358" width="80" height="10" rx="2" fill="white"/>
+  <rect x="560" y="344" width="140" height="40" rx="8" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="590" y="358" width="80" height="10" rx="2" fill="#CCCCCC"/>
+  <text x="470" y="396" text-anchor="middle" font-size="10" fill="#AAA">Prendre une photo</text>
+  <text x="630" y="396" text-anchor="middle" font-size="10" fill="#AAA">Importer un fichier</text>
+  <!-- Preview indicator -->
+  <rect x="300" y="450" width="480" height="46" rx="8" fill="#E8E4DC"/>
+  <rect x="320" y="462" width="40" height="24" rx="3" fill="#CCCCCC"/>
+  <rect x="370" y="466" width="160" height="9" rx="2" fill="#888"/>
+  <rect x="370" y="480" width="100" height="7" rx="2" fill="#CCCCCC"/>
+
+  <!-- Colonne droite : formulaire -->
+  <text x="860" y="120" font-size="12" fill="#999" letter-spacing="1.2">CONTEXTE <tspan fill="#BBBBBB" font-style="italic">(optionnel)</tspan></text>
+  <rect x="860" y="132" width="380" height="520" rx="14" fill="white" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- 6 champs en 2 colonnes -->
+  <rect x="876" y="154" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="876" y="169" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="958" y="216" text-anchor="middle" font-size="9" fill="#AAA">Champ 1</text>
+
+  <rect x="1060" y="154" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="1060" y="169" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="1142" y="216" text-anchor="middle" font-size="9" fill="#AAA">Champ 2</text>
+
+  <rect x="876" y="226" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="876" y="241" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="958" y="288" text-anchor="middle" font-size="9" fill="#AAA">Champ 3</text>
+
+  <rect x="1060" y="226" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="1060" y="241" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="1142" y="288" text-anchor="middle" font-size="9" fill="#AAA">Champ 4</text>
+
+  <rect x="876" y="298" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="876" y="313" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="958" y="360" text-anchor="middle" font-size="9" fill="#AAA">Champ 5</text>
+
+  <rect x="1060" y="298" width="74" height="9" rx="2" fill="#CCCCCC"/>
+  <rect x="1060" y="313" width="164" height="34" rx="7" fill="#F0EDE6" stroke="#CCCCCC" stroke-width="0.5"/>
+  <text x="1142" y="360" text-anchor="middle" font-size="9" fill="#AAA">Champ 6</text>
+
+  <!-- CTA dans la colonne droite -->
+  <rect x="876" y="576" width="348" height="50" rx="10" fill="#333"/>
+  <rect x="976" y="593" width="148" height="14" rx="3" fill="white"/>
+  <text x="1050" y="638" text-anchor="middle" font-size="11" fill="#999">Lancer l'analyse</text>
+
+  <!-- Footer -->
+  <rect x="0" y="756" width="1280" height="64" fill="#E8E4DC"/>
+  <text x="640" y="800" text-anchor="middle" font-size="11" fill="#AAAAAA">Desktop — 3/5 · Analyse d'image</text>
+</svg>

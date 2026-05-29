@@ -1,0 +1,67 @@
+<svg viewBox="0 0 400 720" xmlns="http://www.w3.org/2000/svg" width="400" height="720" font-family="Arial, Helvetica, sans-serif">
+  <title>Wireframe — Page 2 : Tableau de bord</title>
+  <desc>Dashboard utilisateur connecté avec accès analyse et historique</desc>
+
+  <rect width="400" height="720" fill="#F8F8F6"/>
+  <rect x="20" y="20" width="360" height="680" rx="12" fill="white" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Topbar -->
+  <rect x="20" y="20" width="360" height="44" rx="12" fill="#F1EFE8"/>
+  <rect x="20" y="52" width="360" height="12" fill="#F1EFE8"/>
+  <rect x="36" y="34" width="80" height="12" rx="3" fill="#AAAAAA"/>
+  <!-- Déconnexion -->
+  <rect x="316" y="32" width="50" height="24" rx="5" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="324" y="40" width="34" height="8" rx="2" fill="#CCCCCC"/>
+
+  <!-- Greeting -->
+  <circle cx="54" cy="106" r="18" fill="#DDDDDD"/>
+  <rect x="80" y="96" width="130" height="10" rx="2" fill="#888"/>
+  <rect x="80" y="112" width="80" height="8" rx="2" fill="#CCCCCC"/>
+  <line x1="36" y1="132" x2="364" y2="132" stroke="#EEEEEE" stroke-width="0.5"/>
+
+  <!-- Section label -->
+  <text x="36" y="154" font-size="10" fill="#999" letter-spacing="1">QUE VOULEZ-VOUS FAIRE ?</text>
+
+  <!-- Card Analyse -->
+  <rect x="36" y="164" width="152" height="130" rx="10" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="86" y="180" width="52" height="52" rx="8" fill="#DDDDDD"/>
+  <rect x="62" y="242" width="100" height="10" rx="2" fill="#888"/>
+  <rect x="52" y="258" width="120" height="8" rx="2" fill="#CCCCCC"/>
+  <text x="112" y="286" text-anchor="middle" font-size="9" fill="#999">Nouvelle analyse</text>
+
+  <!-- Card Historique -->
+  <rect x="212" y="164" width="152" height="130" rx="10" fill="white" stroke="#CCCCCC" stroke-width="0.5"/>
+  <rect x="262" y="180" width="52" height="52" rx="8" fill="#DDDDDD"/>
+  <rect x="238" y="242" width="100" height="10" rx="2" fill="#888"/>
+  <rect x="228" y="258" width="120" height="8" rx="2" fill="#CCCCCC"/>
+  <text x="288" y="286" text-anchor="middle" font-size="9" fill="#999">Mes analyses passées</text>
+
+  <!-- Divider -->
+  <line x1="36" y1="308" x2="364" y2="308" stroke="#EEEEEE" stroke-width="0.5"/>
+
+  <!-- Section label dernières analyses -->
+  <text x="36" y="326" font-size="10" fill="#999" letter-spacing="1">DERNIÈRES ANALYSES</text>
+
+  <!-- Hist item 1 -->
+  <rect x="36" y="334" width="328" height="58" rx="8" fill="white" stroke="#EEEEEE" stroke-width="0.5"/>
+  <rect x="48" y="347" width="52" height="36" rx="4" fill="#DDDDDD"/>
+  <rect x="112" y="349" width="70" height="7" rx="2" fill="#CCCCCC"/>
+  <rect x="112" y="362" width="140" height="9" rx="2" fill="#888"/>
+  <polygon points="352,358 358,363 352,368" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Hist item 2 -->
+  <rect x="36" y="400" width="328" height="58" rx="8" fill="white" stroke="#EEEEEE" stroke-width="0.5"/>
+  <rect x="48" y="413" width="52" height="36" rx="4" fill="#DDDDDD"/>
+  <rect x="112" y="415" width="70" height="7" rx="2" fill="#CCCCCC"/>
+  <rect x="112" y="428" width="110" height="9" rx="2" fill="#888"/>
+  <polygon points="352,424 358,429 352,434" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Hist item 3 -->
+  <rect x="36" y="466" width="328" height="58" rx="8" fill="white" stroke="#EEEEEE" stroke-width="0.5"/>
+  <rect x="48" y="479" width="52" height="36" rx="4" fill="#DDDDDD"/>
+  <rect x="112" y="481" width="70" height="7" rx="2" fill="#CCCCCC"/>
+  <rect x="112" y="494" width="160" height="9" rx="2" fill="#888"/>
+  <polygon points="352,490 358,495 352,500" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <text x="200" y="700" text-anchor="middle" font-size="10" fill="#BBBBBB">2 / 5 — Tableau de bord</text>
+</svg>

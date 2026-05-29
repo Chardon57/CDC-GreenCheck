@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 400 700"
+   width="400"
+   height="700"
+   font-family="Arial, Helvetica, sans-serif"
+   version="1.1"
+   id="svg19"
+   sodipodi:docname="wf_01_accueil_no_google.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs19" />
+  <sodipodi:namedview
+     id="namedview19"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.3185714"
+     inkscape:cx="199.83749"
+     inkscape:cy="350"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19" />
+  <title
+     id="title1">Wireframe — Page 1 : Accueil / Connexion</title>
+  <desc
+     id="desc1">Page d'accueil avec hero et formulaire de connexion</desc>
+  <!-- Background -->
+  <rect
+     width="400"
+     height="700"
+     fill="#F8F8F6"
+     id="rect1" />
+  <!-- Device frame -->
+  <rect
+     x="20"
+     y="20"
+     width="360"
+     height="660"
+     rx="12"
+     fill="white"
+     stroke="#CCCCCC"
+     stroke-width="1.5"
+     id="rect2" />
+  <!-- Topbar -->
+  <rect
+     x="20"
+     y="20"
+     width="360"
+     height="44"
+     rx="12"
+     fill="#F1EFE8"
+     id="rect3" />
+  <rect
+     x="20"
+     y="52"
+     width="360"
+     height="12"
+     fill="#F1EFE8"
+     id="rect4" />
+  <rect
+     x="36"
+     y="34"
+     width="80"
+     height="12"
+     rx="3"
+     fill="#AAAAAA"
+     id="rect5" />
+  <!-- Hero zone -->
+  <rect
+     x="36"
+     y="80"
+     width="328"
+     height="180"
+     rx="10"
+     fill="#F1EFE8"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     stroke-dasharray="4,3"
+     id="rect6" />
+  <!-- Avatar -->
+  <circle
+     cx="200"
+     cy="126"
+     r="26"
+     fill="#CCCCCC"
+     id="circle6" />
+  <!-- H1 -->
+  <rect
+     x="110"
+     y="160"
+     width="180"
+     height="13"
+     rx="3"
+     fill="#888"
+     id="rect7" />
+  <!-- H2 -->
+  <rect
+     x="76"
+     y="181"
+     width="248"
+     height="9"
+     rx="3"
+     fill="#CCCCCC"
+     id="rect8" />
+  <!-- Slogan text -->
+  <text
+     x="200"
+     y="222"
+     text-anchor="middle"
+     font-size="10"
+     fill="#999"
+     id="text8">Slogan / description courte de l'application</text>
+  <!-- Section label -->
+  <text
+     x="36"
+     y="286"
+     font-size="10"
+     fill="#999"
+     letter-spacing="1"
+     id="text9">CONNEXION</text>
+  <!-- Form card -->
+  <rect
+     x="59.968338"
+     y="295.96835"
+     width="280.06332"
+     height="228.77405"
+     rx="10.002261"
+     fill="#ffffff"
+     stroke="#cccccc"
+     stroke-width="0.5"
+     id="rect9" />
+  <!-- Email label + input -->
+  <rect
+     x="76"
+     y="314"
+     width="60"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect10" />
+  <rect
+     x="76"
+     y="328"
+     width="248"
+     height="32"
+     rx="6"
+     fill="#F1EFE8"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="rect11" />
+  <!-- Password label + input -->
+  <rect
+     x="76"
+     y="370"
+     width="60"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect12" />
+  <rect
+     x="76"
+     y="384"
+     width="248"
+     height="32"
+     rx="6"
+     fill="#F1EFE8"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="rect13" />
+  <!-- Submit button -->
+  <rect
+     x="76"
+     y="428"
+     width="248"
+     height="36"
+     rx="6"
+     fill="#555"
+     id="rect14" />
+  <rect
+     x="140"
+     y="442"
+     width="120"
+     height="10"
+     rx="2"
+     fill="white"
+     id="rect15" />
+  <text
+     x="200"
+     y="476"
+     text-anchor="middle"
+     font-size="9"
+     fill="#999"
+     id="text15">Se connecter</text>
+  <!-- OR divider -->
+  <line
+     x1="100"
+     y1="494"
+     x2="168"
+     y2="494"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="line15" />
+  <text
+     x="200"
+     y="497"
+     text-anchor="middle"
+     font-size="10"
+     fill="#BBBBBB"
+     id="text16">ou</text>
+  <line
+     x1="232"
+     y1="494"
+     x2="300"
+     y2="494"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="line16" />
+  <!-- Social button -->
+  <!-- Links -->
+  <text
+     x="200"
+     y="510"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#aaaaaa"
+     id="text18">Mot de passe oublié · Créer un compte</text>
+  <!-- Page label -->
+  <text
+     x="200"
+     y="660"
+     text-anchor="middle"
+     font-size="10"
+     fill="#BBBBBB"
+     id="text19">1 / 5 — Accueil / Connexion</text>
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Wireframe — Page 1 : Accueil / Connexion</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

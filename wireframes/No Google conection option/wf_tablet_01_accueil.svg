@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 768 960"
+   width="768"
+   height="960"
+   font-family="Arial, Helvetica, sans-serif"
+   version="1.1"
+   id="svg34"
+   sodipodi:docname="wf_tablet_01_accueil.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs34" />
+  <sodipodi:namedview
+     id="namedview34"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.96145833"
+     inkscape:cx="384.31203"
+     inkscape:cy="506.00217"
+     inkscape:window-width="1920"
+     inkscape:window-height="1131"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34" />
+  <title
+     id="title1">Wireframe Tablette — Page 1 : Accueil / Connexion</title>
+  <rect
+     width="768"
+     height="960"
+     fill="#F0EDE6"
+     id="rect1" />
+  <!-- Device frame -->
+  <rect
+     x="20"
+     y="20"
+     width="728"
+     height="920"
+     rx="16"
+     fill="white"
+     stroke="#BBBBBB"
+     stroke-width="2"
+     id="rect2" />
+  <!-- Topbar -->
+  <rect
+     x="20"
+     y="20"
+     width="728"
+     height="56"
+     rx="16"
+     fill="#E8E4DC"
+     id="rect3" />
+  <rect
+     x="20"
+     y="60"
+     width="728"
+     height="16"
+     fill="#E8E4DC"
+     id="rect4" />
+  <rect
+     x="44"
+     y="36"
+     width="100"
+     height="14"
+     rx="3"
+     fill="#AAAAAA"
+     id="rect5" />
+  <rect
+     x="628"
+     y="34"
+     width="100"
+     height="24"
+     rx="6"
+     fill="white"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="rect6" />
+  <rect
+     x="644"
+     y="42"
+     width="68"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect7" />
+  <!-- Hero — centré, plus large -->
+  <rect
+     x="44"
+     y="96"
+     width="680"
+     height="200"
+     rx="12"
+     fill="#F0EDE6"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     stroke-dasharray="5,4"
+     id="rect8" />
+  <circle
+     cx="384"
+     cy="148"
+     r="34"
+     fill="#CCCCCC"
+     id="circle8" />
+  <rect
+     x="244"
+     y="192"
+     width="280"
+     height="14"
+     rx="3"
+     fill="#888"
+     id="rect9" />
+  <rect
+     x="184"
+     y="214"
+     width="400"
+     height="10"
+     rx="3"
+     fill="#CCCCCC"
+     id="rect10" />
+  <text
+     x="384"
+     y="268"
+     text-anchor="middle"
+     font-size="12"
+     fill="#999"
+     id="text10">Slogan / description courte de l'application</text>
+  <!-- Layout 2 colonnes : form gauche, infos droite -->
+  <text
+     x="44"
+     y="330"
+     font-size="11"
+     fill="#999"
+     letter-spacing="1.2"
+     id="text11">CONNEXION</text>
+  <!-- Formulaire colonne gauche -->
+  <rect
+     x="43.971233"
+     y="343.97122"
+     width="340.05753"
+     height="267"
+     rx="12.00203"
+     fill="#ffffff"
+     stroke="#dddddd"
+     stroke-width="0.5"
+     id="rect11" />
+  <rect
+     x="64"
+     y="366"
+     width="80"
+     height="9"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect12" />
+  <rect
+     x="64"
+     y="381"
+     width="300"
+     height="36"
+     rx="8"
+     fill="#F0EDE6"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="rect13" />
+  <rect
+     x="64"
+     y="428"
+     width="80"
+     height="9"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect14" />
+  <rect
+     x="64"
+     y="443"
+     width="300"
+     height="36"
+     rx="8"
+     fill="#F0EDE6"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="rect15" />
+  <rect
+     x="64"
+     y="494"
+     width="300"
+     height="40"
+     rx="8"
+     fill="#333"
+     id="rect16" />
+  <rect
+     x="144"
+     y="508"
+     width="140"
+     height="11"
+     rx="2"
+     fill="white"
+     id="rect17" />
+  <text
+     x="214"
+     y="546"
+     text-anchor="middle"
+     font-size="10"
+     fill="#999"
+     id="text17">Se connecter</text>
+  <line
+     x1="104"
+     y1="564"
+     x2="184"
+     y2="564"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="line17" />
+  <text
+     x="214"
+     y="567"
+     text-anchor="middle"
+     font-size="11"
+     fill="#BBBBBB"
+     id="text18">ou</text>
+  <line
+     x1="244"
+     y1="564"
+     x2="324"
+     y2="564"
+     stroke="#CCCCCC"
+     stroke-width="0.5"
+     id="line18" />
+  <text
+     x="214"
+     y="586"
+     text-anchor="middle"
+     font-size="10px"
+     fill="#aaaaaa"
+     id="text20">Mot de passe oublié · Créer un compte</text>
+  <!-- Panneau droit : infos / avantages -->
+  <rect
+     x="410.05139"
+     y="343.97122"
+     width="316.05753"
+     height="267"
+     rx="12.002185"
+     fill="#f0ede6"
+     stroke="#dddddd"
+     stroke-width="0.5"
+     id="rect21" />
+  <rect
+     x="428"
+     y="368"
+     width="180"
+     height="12"
+     rx="3"
+     fill="#888"
+     id="rect22" />
+  <rect
+     x="428"
+     y="390"
+     width="276"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect23" />
+  <rect
+     x="428"
+     y="404"
+     width="240"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect24" />
+  <rect
+     x="428"
+     y="418"
+     width="260"
+     height="8"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect25" />
+  <!-- Picto features -->
+  <rect
+     x="428"
+     y="444"
+     width="28"
+     height="28"
+     rx="6"
+     fill="#DDDDDD"
+     id="rect26" />
+  <rect
+     x="466"
+     y="448"
+     width="200"
+     height="9"
+     rx="2"
+     fill="#AAAAAA"
+     id="rect27" />
+  <rect
+     x="466"
+     y="462"
+     width="160"
+     height="7"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect28" />
+  <rect
+     x="428"
+     y="484"
+     width="28"
+     height="28"
+     rx="6"
+     fill="#DDDDDD"
+     id="rect29" />
+  <rect
+     x="466"
+     y="488"
+     width="180"
+     height="9"
+     rx="2"
+     fill="#AAAAAA"
+     id="rect30" />
+  <rect
+     x="466"
+     y="502"
+     width="140"
+     height="7"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect31" />
+  <rect
+     x="428"
+     y="524"
+     width="28"
+     height="28"
+     rx="6"
+     fill="#DDDDDD"
+     id="rect32" />
+  <rect
+     x="466"
+     y="528"
+     width="210"
+     height="9"
+     rx="2"
+     fill="#AAAAAA"
+     id="rect33" />
+  <rect
+     x="466"
+     y="542"
+     width="170"
+     height="7"
+     rx="2"
+     fill="#CCCCCC"
+     id="rect34" />
+  <text
+     x="384"
+     y="940"
+     text-anchor="middle"
+     font-size="11"
+     fill="#BBBBBB"
+     id="text34">Tablette — 1/5 · Accueil / Connexion</text>
+</svg>
