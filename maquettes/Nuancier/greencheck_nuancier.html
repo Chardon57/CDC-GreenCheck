@@ -1,0 +1,183 @@
+
+<style>
+  .palette-section { margin-bottom: 2rem; }
+  .palette-label { font-size: 13px; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; font-weight: 500; }
+  .swatch-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .swatch { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .swatch-color { width: 80px; height: 56px; border-radius: 8px; border: 0.5px solid rgba(0,0,0,0.1); }
+  .swatch-info { font-size: 11px; color: var(--color-text-secondary); line-height: 1.4; }
+  .swatch-name { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
+  .role-badge { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 4px; background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-tertiary); margin-top: 2px; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 1.5rem 0; }
+  .combo-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 0.5rem; }
+  .combo-chip { padding: 8px 14px; border-radius: 8px; font-size: 13px; font-weight: 500; border: 0.5px solid transparent; }
+  .preview-bar { display: flex; height: 48px; border-radius: 10px; overflow: hidden; margin-top: 0.5rem; }
+  .preview-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex: 1; }
+</style>
+
+<div style="padding: 1.5rem 0;">
+
+  <div class="palette-section">
+    <div class="palette-label">🌿 Couleurs primaires — identité de la marque</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2D5A1B;"></div>
+        <div class="swatch-name">Forêt profonde</div>
+        <div class="swatch-info">#2D5A1B</div>
+        <span class="role-badge">Primaire</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A8C2A;"></div>
+        <div class="swatch-name">Vert feuille</div>
+        <div class="swatch-info">#4A8C2A</div>
+        <span class="role-badge">Primaire clair</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#7AB648;"></div>
+        <div class="swatch-name">Vert tendre</div>
+        <div class="swatch-info">#7AB648</div>
+        <span class="role-badge">Accent</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C8E6A0;"></div>
+        <div class="swatch-name">Vert pâle</div>
+        <div class="swatch-info">#C8E6A0</div>
+        <span class="role-badge">Fond info</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#F0F7E8;"></div>
+        <div class="swatch-name">Blanc mousse</div>
+        <div class="swatch-info">#F0F7E8</div>
+        <span class="role-badge">Fond léger</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="palette-section">
+    <div class="palette-label">🌰 Couleurs secondaires — terre & bois</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#5C3317;"></div>
+        <div class="swatch-name">Terre sombre</div>
+        <div class="swatch-info">#5C3317</div>
+        <span class="role-badge">Secondaire</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#8B5A2B;"></div>
+        <div class="swatch-name">Écorce</div>
+        <div class="swatch-info">#8B5A2B</div>
+        <span class="role-badge">Secondaire clair</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C49A6C;"></div>
+        <div class="swatch-name">Bois clair</div>
+        <div class="swatch-info">#C49A6C</div>
+        <span class="role-badge">Accent</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#EDD9BF;"></div>
+        <div class="swatch-name">Sable</div>
+        <div class="swatch-info">#EDD9BF</div>
+        <span class="role-badge">Fond chaud</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FAF5EE;"></div>
+        <div class="swatch-name">Crème</div>
+        <div class="swatch-info">#FAF5EE</div>
+        <span class="role-badge">Fond page</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="palette-section">
+    <div class="palette-label">⚙️ Couleurs fonctionnelles — états &amp; alertes</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A8C2A;"></div>
+        <div class="swatch-name">Succès / Sain</div>
+        <div class="swatch-info">#4A8C2A</div>
+        <span class="role-badge">✅ Succès</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#D97706;"></div>
+        <div class="swatch-name">Attention</div>
+        <div class="swatch-info">#D97706</div>
+        <span class="role-badge">⚠️ Warning</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#C0392B;"></div>
+        <div class="swatch-name">Maladie / Erreur</div>
+        <div class="swatch-info">#C0392B</div>
+        <span class="role-badge">🔴 Danger</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1A6B9A;"></div>
+        <div class="swatch-name">Information</div>
+        <div class="swatch-info">#1A6B9A</div>
+        <span class="role-badge">ℹ️ Info</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="palette-section">
+    <div class="palette-label">🖋️ Typographie &amp; neutres</div>
+    <div class="swatch-row">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1C1C1A;"></div>
+        <div class="swatch-name">Texte principal</div>
+        <div class="swatch-info">#1C1C1A</div>
+        <span class="role-badge">Texte</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A4A45;"></div>
+        <div class="swatch-name">Texte secondaire</div>
+        <div class="swatch-info">#4A4A45</div>
+        <span class="role-badge">Sous-titre</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#888880;"></div>
+        <div class="swatch-name">Texte désactivé</div>
+        <div class="swatch-info">#888880</div>
+        <span class="role-badge">Hint</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E8E6E0;"></div>
+        <div class="swatch-name">Bordure</div>
+        <div class="swatch-info">#E8E6E0</div>
+        <span class="role-badge">Séparateur</span>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FFFFFF; border: 0.5px solid #E8E6E0;"></div>
+        <div class="swatch-name">Blanc pur</div>
+        <div class="swatch-info">#FFFFFF</div>
+        <span class="role-badge">Fond carte</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="palette-section">
+    <div class="palette-label">👁️ Aperçu — barre identité visuelle</div>
+    <div class="preview-bar">
+      <div class="preview-seg" style="background:#2D5A1B; color:#C8E6A0; flex:2;">Forêt</div>
+      <div class="preview-seg" style="background:#4A8C2A; color:#F0F7E8; flex:2;">Feuille</div>
+      <div class="preview-seg" style="background:#7AB648; color:#2D5A1B; flex:1.5;">Tendre</div>
+      <div class="preview-seg" style="background:#FAF5EE; color:#5C3317; flex:1.5;">Crème</div>
+      <div class="preview-seg" style="background:#8B5A2B; color:#FAF5EE; flex:1.5;">Écorce</div>
+      <div class="preview-seg" style="background:#5C3317; color:#EDD9BF; flex:1;">Terre</div>
+    </div>
+    <div style="margin-top:1rem;">
+      <div class="combo-row">
+        <div class="combo-chip" style="background:#2D5A1B; color:#C8E6A0; border-color:#2D5A1B;">Bouton principal</div>
+        <div class="combo-chip" style="background:#FAF5EE; color:#2D5A1B; border-color:#4A8C2A;">Bouton secondaire</div>
+        <div class="combo-chip" style="background:#F0F7E8; color:#2D5A1B; border-color:#C8E6A0;">Badge sain</div>
+        <div class="combo-chip" style="background:#FEF3CD; color:#7B4F00; border-color:#D97706;">Badge attention</div>
+        <div class="combo-chip" style="background:#FDECEA; color:#7B1515; border-color:#C0392B;">Badge maladie</div>
+      </div>
+    </div>
+  </div>
+
+</div>
