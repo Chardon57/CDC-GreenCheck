@@ -1,4 +1,4 @@
-![](greencheck/frontend/src/assets/logo_greencheck.png)
+![](frontend/src/assets/logo_greencheck.png)
 
 # CDC GreenCheck
 
