@@ -34,7 +34,7 @@
   --color-white:       #FFFFFF;   /* Blanc pur */
 
   /* --- Tokens sémantiques (ce que tu utilises dans les composants) --- */
-  --bg:                var(--color-blanc-mousse);
+  --bg:                var(--color-creme);
   --bg-alt:            var(--color-creme);
   --text:              var(--color-text);
   --text-h:            var(--color-foret);

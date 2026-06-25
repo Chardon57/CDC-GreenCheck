@@ -1,0 +1,230 @@
+/* frontend/src/pages/LoginPage.css */
+
+/* --- Mise en page générale --- */
+.login-page {
+  min-height: 100vh;
+  background-color: var(--color-creme);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+}
+
+/* ============================================
+   ZONE ② — Branding
+============================================ */
+.login-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* gap: 0.5rem; */
+}
+
+.login-branding__logo {
+  height: 360px;
+  width: auto;
+}
+
+.login-branding__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.login-branding__tagline {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  max-width: 300px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   ZONE ③④ — Carte formulaire
+============================================ */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card__title {
+  font-family: var(--heading);
+  font-size: 28;
+  color: var(--color-text);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.login-card__forgot {
+  text-align: right;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Champs de formulaire --- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+}
+
+.form-field__label {
+  font-family: var(--sans);
+  font-size: 14;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.form-field__input {
+  height: 48px;
+  width: 342px;
+  padding: 0 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  font-family: var(--sans);
+  font-size: 16;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.form-field__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(45, 90, 27, 0.12);
+}
+
+/* --- Boutons --- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  width: 342px;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn--primary {
+  background-color: var(--color-foret);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-vert-feuille);
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* --- Lien simple --- */
+.link {
+  font-size: 14;
+  color: var(--color-vert-feuille);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* --- Séparateur --- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.divider__line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.divider__text {
+  font-size: 14;
+  color: var(--color-text-off);
+}
+
+.centered-text {
+  text-align: center;
+  line-height: 0.5;
+}
+
+.secondary-text {
+  color: var(--color-text-sec);
+}
+/* ============================================
+   Desktop (≥ 1024px) — disposition deux colonnes
+============================================ */
+@media (min-width: 1024px) {
+  .login-page {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+  }
+
+  /* Le branding prend la moitié gauche */
+  .login-branding {
+    flex: 1;
+    max-width: 480px;
+    padding: 3rem;
+    border-right: 1px solid var(--color-border);
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .login-branding__logo {
+    height: 480px;
+  }
+
+  .login-branding__title {
+    font-size: 2.5rem;
+  }
+
+  .login-branding__tagline {
+    max-width: 340px;
+    font-size: 1rem;
+  }
+
+  /* La carte prend la moitié droite */
+  .login-card {
+    flex: 1;
+    max-width: 480px;
+    border: none;
+    border-radius: 0;
+    padding: 3rem;
+    min-height: 100vh;
+    justify-content: center;
+  }
+}
