@@ -1,59 +1,59 @@
-// frontend/src/components/Header.tsx
-
 import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router'
 import MenuIcon from '../assets/menu.svg?react'
 import CloseIcon from '../assets/x.svg?react'
-import logo from '../assets/logo_greencheck.png'
+import logoIcon from '../assets/logo_icon.svg'
 import './Header.css'
 
-// Déclaration TypeScript des props acceptées par ce composant
-interface HeaderProps {
-  activePage: 'login' | 'register' | 'analysis' | 'result' | 'history' | 'profile'
-}
 
-export default function Header({ activePage }: HeaderProps) {
+function Header() {
   const [menuOuvert, setMenuOuvert] = useState(false)
+  const navigate = useNavigate() 
+  const location = useLocation() 
+
+  const handleNav = (chemin: string) => {
+    setMenuOuvert(false)
+    navigate(chemin)             
+  }
 
   return (
     <header className="header">
-
-      {/* Zone gauche : logo + nom de l'appli */}
-      <div className="header__brand">
-        <img src={logo} alt="GreenCheck" className="header__logo" />
+      <button className="header__brand" onClick={() => handleNav('/analyse')}>
+        <img src={logoIcon} alt="GreenCheck" className="header__logo" />
         <span className="header__title">GreenCheck</span>
-      </div>
+      </button>
 
-      {/* Bouton hamburger — visible uniquement sur mobile via CSS */}
       <button
         className="header__hamburger"
         onClick={() => setMenuOuvert(!menuOuvert)}
         aria-label={menuOuvert ? 'Fermer le menu' : 'Ouvrir le menu'}
+        aria-expanded={menuOuvert}
       >
         {menuOuvert ? <CloseIcon /> : <MenuIcon />}
       </button>
 
-      {/* Navigation — sa classe change selon l'état du menu */}
       <nav className={menuOuvert ? 'header__nav header__nav--open' : 'header__nav'}>
-        
-          href="/analysis"
-          className={activePage === 'analysis' ? 'nav__link nav__link--active' : 'nav__link'}
+        <button
+          className={location.pathname === '/analyse' ? 'nav__link nav__link--active' : 'nav__link'}
+          onClick={() => handleNav('/analyse')}
         >
           Analyse
-        </a>
-        
-          href="/history"
-          className={activePage === 'history' ? 'nav__link nav__link--active' : 'nav__link'}
+        </button>
+        <button
+          className={location.pathname === '/historique' ? 'nav__link nav__link--active' : 'nav__link'}
+          onClick={() => handleNav('/historique')}
         >
           Historique
-        </a>
-        
-          href="/profile"
-          className={activePage === 'profile' ? 'nav__link nav__link--active' : 'nav__link'}
+        </button>
+        <button
+          className={location.pathname === '/profil' ? 'nav__link nav__link--active' : 'nav__link'}
+          onClick={() => handleNav('/profil')}
         >
           Profil
-        </a>
+        </button>
       </nav>
-
     </header>
   )
 }
+
+export default Header

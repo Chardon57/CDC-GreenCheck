@@ -1,0 +1,107 @@
+/* ============================================================
+   Auth.css — styles propres à Login et Register
+   (complète pages.css pour la mise en page split-screen)
+============================================================ */
+
+.auth-page {
+  min-height: 100vh;
+  background-color: var(--color-creme);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Séparateur vertical — masqué sur mobile */
+.auth-split__divider {
+  display: none;
+}
+
+/* ── Côté logo ─────────────────────────────────────────── */
+.auth-brand-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem 1rem;
+  width: 100%;
+}
+
+.auth-brand__logo {
+  width: 220px;
+  max-width: 80vw;
+  height: auto;
+}
+
+/* ── Côté formulaire ────────────────────────────────────── */
+.auth-form-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.25rem 3rem;
+}
+
+.auth-form-inner {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-form__titre {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-foret);
+  margin: 0 0 1.5rem;
+}
+
+.auth-form__forgot {
+  text-align: right;
+  margin-bottom: 1.25rem;
+}
+
+.auth-form__switch {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ── Desktop ≥ 1024px ───────────────────────────────────── */
+@media (min-width: 1024px) {
+  .auth-page {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  /* Séparateur vertical visible */
+  .auth-split__divider {
+    display: block;
+    width: 1px;
+    background-color: var(--color-border);
+    flex-shrink: 0;
+  }
+
+  .auth-brand-side {
+    flex: 1;
+    padding: 3rem;
+    min-height: 100vh;
+  }
+
+  .auth-brand__logo {
+    width: 340px;
+  }
+
+  .auth-form-side {
+    flex: 1;
+    align-items: center;
+    padding: 3rem;
+    min-height: 100vh;
+  }
+
+  /* Register : formulaire à gauche, logo à droite */
+  .auth-page--reversed {
+    flex-direction: row-reverse;
+  }
+
+  .auth-form__titre {
+    font-size: 2rem;
+  }
+}

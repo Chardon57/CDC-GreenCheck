@@ -1,166 +1,73 @@
 /* ============================================================
-   GREENCHECK — index.css
-   Charte graphique : Forêt / Terre / Sémantique
-   Typographie : Lora (titres) + Inter (interface)
-   ============================================================ */
+   GreenCheck — Tokens globaux & reset
+   Palette issue du fichier de charte graphique fourni
+============================================================ */
 
-:root {
-  /* --- Couleurs principales --- */
-  --color-foret:       #2D5A1B;   /* Forêt profonde — brand primaire */
-  --color-vert-feuille:#4A8C2A;   /* Vert feuille — succès / sain */
-  --color-vert-tendre: #7AB64B;   /* Vert tendre — hover, accents */
-  --color-vert-pale:   #C8E6A0;   /* Vert pâle — backgrounds légers */
-  --color-blanc-mousse:#F0F7E8;   /* Blanc mousse — fond principal */
+/* Import typographies (à adapter si les fonts sont en local) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
 
-  --color-terre:       #5C3B17;   /* Terre sombre — brand secondaire */
-  --color-ecorce:      #8B5A2B;   /* Écorce — accents chauds */
-  --color-bois-clair:  #C49A6C;   /* Bois clair — décoratif */
-  --color-sable:       #E8D9BF;   /* Sable — bordures chaudes */
-  --color-creme:       #FAF5EE;   /* Crème — fond alternatif */
-
-  /* --- Couleurs sémantiques --- */
-  --color-attention:   #D97706;   /* Attention / Avertissement */
-  --color-erreur:      #C0392B;   /* Maladie / Erreur */
-  --color-info:        #1A6B9A;   /* Information */
-  --color-succes:      #4A8C2A;   /* Succès / Sain (= vert feuille) */
-
-  /* --- Texte --- */
-  --color-text:        #1C1C1A;   /* Texte principal */
-  --color-text-sec:    #4A4A45;   /* Texte secondaire */
-  --color-text-off:    #888880;   /* Texte désactivé */
-
-  /* --- UI structure --- */
-  --color-border:      #E8E6E0;   /* Bordure */
-  --color-white:       #FFFFFF;   /* Blanc pur */
-
-  /* --- Tokens sémantiques (ce que tu utilises dans les composants) --- */
-  --bg:                var(--color-creme);
-  --bg-alt:            var(--color-creme);
-  --text:              var(--color-text);
-  --text-h:            var(--color-foret);
-  --border:            var(--color-border);
-  --accent:            var(--color-vert-feuille);
-  --accent-light:      var(--color-vert-pale);
-  --accent-bg:         rgba(74, 140, 42, 0.08);
-  --accent-border:     rgba(74, 140, 42, 0.35);
-  --shadow:
-    rgba(45, 90, 27, 0.08) 0 10px 15px -3px,
-    rgba(45, 90, 27, 0.04) 0 4px 6px -2px;
-
-  /* --- Typographie --- */
-  --sans:    'Inter', system-ui, 'Segoe UI', sans-serif;
-  --heading: 'Lora', Georgia, serif;
-  --mono:    ui-monospace, Consolas, monospace;
-
-  /* --- Base --- */
-  font-family: var(--sans);
-  font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-  color: var(--text);
-  background: var(--bg);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+/* ── Reset minimal ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* --- Mode sombre --- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:           #1A1F17;
-    --bg-alt:       #222819;
-    --text:         #D4D9CC;
-    --text-h:       #A8CC7A;
-    --border:       #2E3828;
-    --accent:       #7AB64B;
-    --accent-light: #2D4020;
-    --accent-bg:    rgba(122, 182, 75, 0.12);
-    --accent-border:rgba(122, 182, 75, 0.4);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px,
-      rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
-
-/* ============================================================
-   RESET & STRUCTURE
-   ============================================================ */
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1c1c1a;
+  background-color: #faf5ee;
+  -webkit-font-smoothing: antialiased;
 }
 
-#root {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+img, svg {
+  display: block;
+  max-width: 100%;
 }
 
-/* ============================================================
-   TYPOGRAPHIE
-   ============================================================ */
-
-h1, h2, h3, h4 {
-  font-family: var(--heading);
-  font-weight: 600;
-  color: var(--text-h);
-  margin: 0;
+button {
+  font-family: inherit;
+  font-size: inherit;
 }
 
-h1 {
-  font-size: 2.25rem;       /* 36px mobile */
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+/* ── Variables CSS (design tokens) ─────────────────────── */
+:root {
+  /* Couleurs primaires */
+  --color-foret:       #2d5a1b;
+  --color-feuille:     #4a8c2a;
+  --color-tendre:      #7ab648;
+  --color-pale:        #c8e6a0;
+  --color-mousse:      #f0f7e8;
 
-  @media (min-width: 1024px) {
-    font-size: 3rem;         /* 48px desktop */
-  }
-}
+  /* Couleurs secondaires */
+  --color-terre:       #5c3317;
+  --color-ecorce:      #8b5a2b;
+  --color-bois:        #c49a6c;
+  --color-sable:       #edd9bf;
+  --color-creme:       #faf5ee;
 
-h2 {
-  font-size: 1.5rem;         /* 24px */
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.5rem;
+  /* Couleurs fonctionnelles */
+  --color-sain:        #4a8c2a;
+  --color-attention:   #d97706;
+  --color-maladie:     #c0392b;
+  --color-info:        #1a6b9a;
 
-  @media (min-width: 1024px) {
-    font-size: 1.75rem;
-  }
-}
+  /* Typographie */
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
 
-h3 {
-  font-size: 1.125rem;       /* 18px */
-  line-height: 1.35;
-}
-
-p {
-  margin: 0 0 1rem;
-  color: var(--text);
-}
-
-/* ============================================================
-   CODE
-   ============================================================ */
-
-code {
-  font-family: var(--mono);
-  font-size: 0.875rem;
-  line-height: 1.5;
-  padding: 2px 6px;
-  border-radius: 4px;
-  background: var(--accent-bg);
-  color: var(--color-foret);
+  /* Neutres */
+  --color-text:        #1c1c1a;
+  --color-text-muted:  #4a4a45;
+  --color-hint:        #888880;
+  --color-border:      #e8e6e0;
+  --color-surface:     #ffffff;
+  --color-background:  #faf5ee;
 }
