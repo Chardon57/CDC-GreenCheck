@@ -44,6 +44,12 @@ class Base(DeclarativeBase):
 
 class Database:
     def __init__(self, url: URL = DATABASE_URL, echo: bool = DB_ECHO) -> None:
+        """_summary_
+
+        Args:
+            url (URL, optional): _description_. Defaults to DATABASE_URL.
+            echo (bool, optional): _description_. Defaults to DB_ECHO.
+        """
         self.engine = create_engine(url, echo=echo)
         self.SessionLocal = sessionmaker(bind=self.engine)
 
