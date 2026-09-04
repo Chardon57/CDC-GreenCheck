@@ -11,6 +11,8 @@ from schemas.user import UserCreate
 
 from config.security import ACCESS_TOKEN_EXPIRE, JWT_ALGORITHM, JWT_SECRET_KEY
 
+#                           Création de l'utilisateur
+# -------------------------------------------------------------------------------------
 _hasher = PasswordHasher()
 
 
@@ -45,6 +47,9 @@ def register_user(session: Session, user_data: UserCreate) -> User:
     session.refresh(user)
     return user
 
+#                         Authentification de l'utilisateur
+# -------------------------------------------------------------------------------------
+
 class InvalidCredentialsError(Exception):
     """Levée quand l'e-mail ou le mot de passe fourni est incorrect."""
 
@@ -60,3 +65,22 @@ def create_access_token(data: dict) -> str:
     to_encode = data.copy()
     to_encode["exp"] = datetime.now(timezone.utc) + ACCESS_TOKEN_EXPIRE
     return jwt.encode(to_encode, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
+
+#                     Vérification de connexion de l'utilisateur
+# -------------------------------------------------------------------------------------
+
+class ExpiredTokenError(Exception):
+    """Levée quand le token JWT a expiré."""
+
+
+class InvalidTokenError(Exception):
+    """Levée quand le token JWT est invalide (signature incorrecte, format corrompu...)."""
+
+
+def decode_access_token(token: str) -> dict:
+    try:
+        return jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
+    except jwt.ExpiredSignatureError:
+        raise ExpiredTokenError()
+    except jwt.InvalidTokenError:
+        raise InvalidTokenError()

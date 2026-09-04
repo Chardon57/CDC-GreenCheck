@@ -11,6 +11,9 @@ from services.auth_service import (
     create_access_token,
     register_user,
 )
+from models.user import User
+
+from dependencies import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -37,3 +40,7 @@ def login(credentials: UserLogin, session: Session = Depends(db.get_session)):
         )
     access_token=create_access_token(data={"sub": str(user.id_user)})
     return Token(access_token=access_token, token_type="bearer")
+
+@router.get("/me", response_model=UserRead)
+def read_current_user(current_user: User = Depends(get_current_user)):
+    return current_user
