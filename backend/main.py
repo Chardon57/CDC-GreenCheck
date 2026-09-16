@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from routes.auth import router as auth_router
+from routes.history import router as history_router
 
 import models  # noqa: F401 — nécessaire pour enregistrer tous les modèles avant create_tables()
 from config.database import db
@@ -22,6 +23,7 @@ app = FastAPI(
 )
 
 app.include_router(auth_router)
+app.include_router(history_router)
 
 @app.get("/")
 def read_root():
