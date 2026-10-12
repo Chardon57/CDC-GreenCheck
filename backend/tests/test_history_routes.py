@@ -4,18 +4,22 @@ from datetime import datetime
 from sqlalchemy import select
 
 from models.analysis import Analysis
+from models.disease import Disease
 from models.plant import Plant
 from models.result import Result
 from models.treatment import Treatment
 from models.user import User
 
 
-def _creer_analyse(session, email: str, date: datetime, plante="Monstera", diagnostic="Excès d'arrosage"):
-    """Insère une analyse complète (plante, résultat, traitement) pour l'utilisateur `email`."""
+def _creer_analyse(session, email: str, date: datetime, plante="Monstera", etat="Attention", maladie="Excès d'arrosage"):
+    """Insère une analyse complète (plante, maladie + conseils, résultat) pour l'utilisateur `email`."""
     user = session.scalar(select(User).where(User.email == email))
     plant = Plant(vernacular_name=plante, official_name=f"{plante} officinalis")
     treatment = Treatment(advice="Réduire la fréquence d'arrosage.")
-    result = Result(label=diagnostic, treatments=[treatment])
+    disease = session.scalar(select(Disease).where(Disease.name == maladie))
+    if disease is None:
+        disease = Disease(name=maladie, treatments=[treatment])
+    result = Result(label=etat, disease=disease)
     analysis = Analysis(
         date=date,
         plant_location="Salon",
@@ -51,7 +55,7 @@ def test_history_vide_pour_un_nouvel_utilisateur(client, make_auth_headers):
     assert response.json() == []
 
 
-def test_history_renvoie_les_analyses_avec_plante_resultat_et_traitements(
+def test_history_renvoie_les_analyses_avec_plante_etat_maladie_et_conseils(
     client, session, make_auth_headers
 ):
     headers = make_auth_headers("a@example.com")
@@ -62,11 +66,13 @@ def test_history_renvoie_les_analyses_avec_plante_resultat_et_traitements(
     assert response.status_code == 200
     (item,) = response.json()
     assert item["plant"]["vernacular_name"] == "Monstera"
-    assert item["result"]["label"] == "Excès d'arrosage"
+    assert item["result"]["label"] == "Attention"  # l'état affiché dans l'historique
+    assert item["result"]["disease"]["name"] == "Excès d'arrosage"
     assert item["confidence"] == 0.87
-    # Sérialisation imbriquée du traitement (régression sur la coquille id_treatmentt)
-    assert item["result"]["treatments"][0]["advice"] == "Réduire la fréquence d'arrosage."
-    assert "id_treatment" in item["result"]["treatments"][0]
+    # Sérialisation imbriquée : résultat -> maladie -> conseils
+    (treatment,) = item["result"]["disease"]["treatments"]
+    assert treatment["advice"] == "Réduire la fréquence d'arrosage."
+    assert "id_treatment" in treatment  # régression sur l'ancienne coquille id_treatmentt
 
 
 def test_history_tri_de_la_plus_recente_a_la_plus_ancienne(client, session, make_auth_headers):
