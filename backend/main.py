@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from routes.analysis import router as analysis_router
 from routes.auth import router as auth_router
 from routes.history import router as history_router
 
@@ -23,6 +24,7 @@ app = FastAPI(
 )
 
 app.include_router(auth_router)
+app.include_router(analysis_router)
 app.include_router(history_router)
 
 @app.get("/")
