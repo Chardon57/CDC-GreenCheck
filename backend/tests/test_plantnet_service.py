@@ -71,7 +71,25 @@ def test_identification_reussie():
         vernacular_name="Monstera",
         official_name="Monstera deliciosa",  # sans le nom d'auteur "Liebm."
         score=0.73534,
+        family="Araceae",  # famille botanique (latin), telle que fournie par Pl@ntNet
     )
+
+
+def test_famille_absente_de_la_reponse():
+    data = copy.deepcopy(REAL_RESPONSE)
+    del data["results"][0]["species"]["family"]
+
+    result = identify_plant(IMAGE, client=client_returning(json=data))
+
+    assert result.family is None
+    assert result.official_name == "Monstera deliciosa"  # le reste de l'identification est intact
+
+
+def test_famille_nulle_dans_la_reponse():
+    data = copy.deepcopy(REAL_RESPONSE)
+    data["results"][0]["species"]["family"] = None
+
+    assert identify_plant(IMAGE, client=client_returning(json=data)).family is None
 
 
 def test_la_requete_envoyee_a_plantnet_est_correcte():

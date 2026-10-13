@@ -11,10 +11,13 @@ from models.treatment import Treatment
 from models.user import User
 
 
-def _creer_analyse(session, email: str, date: datetime, plante="Monstera", etat="Attention", maladie="Excès d'arrosage"):
+def _creer_analyse(
+    session, email: str, date: datetime, plante="Monstera", etat="Attention", maladie="Excès d'arrosage",
+    famille=None, culture=None,
+):
     """Insère une analyse complète (plante, maladie + conseils, résultat) pour l'utilisateur `email`."""
     user = session.scalar(select(User).where(User.email == email))
-    plant = Plant(vernacular_name=plante, official_name=f"{plante} officinalis")
+    plant = Plant(vernacular_name=plante, official_name=f"{plante} officinalis", family=famille)
     treatment = Treatment(advice="Réduire la fréquence d'arrosage.")
     disease = session.scalar(select(Disease).where(Disease.name == maladie))
     if disease is None:
@@ -24,6 +27,7 @@ def _creer_analyse(session, email: str, date: datetime, plante="Monstera", etat=
         date=date,
         plant_location="Salon",
         plant_exposition="Lumière indirecte",
+        plant_cultivation=culture,
         confidence=0.87,
         user=user,
         plant=plant,
@@ -73,6 +77,29 @@ def test_history_renvoie_les_analyses_avec_plante_etat_maladie_et_conseils(
     (treatment,) = item["result"]["disease"]["treatments"]
     assert treatment["advice"] == "Réduire la fréquence d'arrosage."
     assert "id_treatment" in treatment  # régression sur l'ancienne coquille id_treatmentt
+
+
+def test_history_expose_la_famille_de_la_plante_et_le_type_de_culture(client, session, make_auth_headers):
+    headers = make_auth_headers("a@example.com")
+    _creer_analyse(
+        session, "a@example.com", datetime(2026, 6, 22), famille="Araceae", culture="En pot"
+    )
+
+    (item,) = client.get("/history", headers=headers).json()
+
+    assert item["plant"]["family"] == "Araceae"
+    assert item["plant_cultivation"] == "En pot"
+
+
+def test_history_anciennes_analyses_sans_famille_ni_type_de_culture(client, session, make_auth_headers):
+    """Les lignes créées avant l'ajout des colonnes valent NULL : elles doivent rester lisibles."""
+    headers = make_auth_headers("a@example.com")
+    _creer_analyse(session, "a@example.com", datetime(2026, 6, 22))
+
+    (item,) = client.get("/history", headers=headers).json()
+
+    assert item["plant"]["family"] is None
+    assert item["plant_cultivation"] is None
 
 
 def test_history_tri_de_la_plus_recente_a_la_plus_ancienne(client, session, make_auth_headers):

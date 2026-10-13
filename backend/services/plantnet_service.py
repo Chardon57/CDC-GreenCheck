@@ -35,6 +35,7 @@ class PlantIdentification:
     vernacular_name: str
     official_name: str
     score: float
+    family: str | None = None  # famille botanique (latin), absente de certaines réponses
 
 
 def identify_plant(
@@ -97,6 +98,7 @@ def _parse(response: httpx2.Response) -> PlantIdentification:
         species = best["species"]
         official_name = species["scientificNameWithoutAuthor"]
         common_names = species.get("commonNames") or []
+        family = (species.get("family") or {}).get("scientificNameWithoutAuthor")
     except PlantNotRecognizedError:
         raise
     except (ValueError, KeyError, TypeError, IndexError):
@@ -111,4 +113,5 @@ def _parse(response: httpx2.Response) -> PlantIdentification:
         vernacular_name=common_names[0] if common_names else official_name,
         official_name=official_name,
         score=score,
+        family=family,
     )

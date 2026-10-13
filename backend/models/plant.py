@@ -15,5 +15,7 @@ class Plant(Base):
     id_plant: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     vernacular_name: Mapped[str] = mapped_column(String(255))
     official_name: Mapped[Optional[str]] = mapped_column(String(255))
+    # Famille botanique (nom latin, fourni par Pl@ntNet), par exemple « Araceae »
+    family: Mapped[Optional[str]] = mapped_column(String(255))
 
     analyses: Mapped[List["Analysis"]] = relationship(back_populates="plant")

@@ -9,3 +9,4 @@ class PlantRead(BaseModel):
     id_plant: int
     vernacular_name: str
     official_name: Optional[str]
+    family: Optional[str] = None

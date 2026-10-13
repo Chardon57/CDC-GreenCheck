@@ -17,6 +17,7 @@ os.environ["JWT_SECRET_KEY"] = "cle-secrete-uniquement-pour-les-tests"
 os.environ["JWT_ALGORITHM"] = "HS256"
 os.environ["JWT_EXPIRE_MINUTES"] = "30"
 os.environ["PLANTNET_API_KEY"] = "cle-plantnet-uniquement-pour-les-tests"
+os.environ["ENGINE_URL"] = "http://moteur-ia.test:8001"
 
 import pytest
 from fastapi.testclient import TestClient

@@ -10,6 +10,7 @@ from schemas.result import ResultRead
 class AnalysisCreate(BaseModel):
     plant_location: Optional[str] = Field(default=None, max_length=255)
     plant_exposition: Optional[str] = Field(default=None, max_length=255)
+    plant_cultivation: Optional[str] = Field(default=None, max_length=255)
 
 
 class AnalysisRead(BaseModel):
@@ -19,6 +20,7 @@ class AnalysisRead(BaseModel):
     date: datetime
     plant_location: Optional[str]
     plant_exposition: Optional[str]
+    plant_cultivation: Optional[str] = None
     confidence: float
     id_user: int
     plant: PlantRead
