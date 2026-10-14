@@ -6,7 +6,12 @@ from config.database import db
 from dependencies import get_current_user
 from models.user import User
 from schemas.analysis import AnalysisRead
-from services.history_service import AnalysisNotFoundError, get_user_analyses, get_user_analysis
+from services.history_service import (
+    AnalysisNotFoundError,
+    delete_user_analysis,
+    get_user_analyses,
+    get_user_analysis,
+)
 from services.image_service import image_path
 
 router = APIRouter(prefix="/history", tags=["history"])
@@ -57,3 +62,19 @@ def get_history_image(
             detail="Image introuvable.",
         )
     return FileResponse(path, media_type="image/jpeg", headers={"Cache-Control": "private, max-age=3600"})
+
+
+@router.delete("/{id_analysis}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_history_item(
+    id_analysis: int,
+    current_user: User = Depends(get_current_user),
+    session: Session = Depends(db.get_session),
+):
+    """Supprime une analyse (et sa photo). Réponse 204 : succès, sans contenu à renvoyer."""
+    try:
+        delete_user_analysis(session, current_user.id_user, id_analysis)
+    except AnalysisNotFoundError:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Analyse introuvable.",
+        )

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import EyeIcon from '../assets/eye.svg?react'
 import logoFull from '../assets/logo_full.svg'
-import { register } from '../services/api'
+import { register, ApiError } from '../services/api'
 import type { User } from '../types'
 import './pages.css'
 import './Auth.css'
@@ -44,8 +44,13 @@ function Register({ onLoginSuccess }: RegisterProps) {
       const user = await register({ prenom, nom, email, motDePasse, confirmMotDePasse })
       onLoginSuccess(user)
       navigate('/analyse')
-    } catch {
-      setErreur("Une erreur est survenue lors de l'inscription.")
+    } catch (err) {
+      // 409 (e-mail déjà utilisé) et 0 (serveur injoignable) ont un message précis et utile
+      setErreur(
+        err instanceof ApiError && (err.status === 409 || err.status === 0)
+          ? err.message
+          : "Une erreur est survenue lors de l'inscription.",
+      )
     } finally {
       setChargement(false)
     }

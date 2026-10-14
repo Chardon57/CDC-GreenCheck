@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import EyeIcon from '../assets/eye.svg?react'
 import logoFull from '../assets/logo_full.svg'
-import { login } from '../services/api'
+import { login, ApiError } from '../services/api'
 import type { User } from '../types'
 import './pages.css'
 import './Auth.css'
@@ -32,8 +32,13 @@ function Login({ onLoginSuccess }: LoginProps) {
       const user = await login({ email, motDePasse })
       onLoginSuccess(user)
       navigate('/analyse')
-    } catch {
-      setErreur('Identifiants incorrects. Veuillez réessayer.')
+    } catch (err) {
+      // status 0 = serveur injoignable : inutile d'accuser les identifiants dans ce cas
+      setErreur(
+        err instanceof ApiError && err.status === 0
+          ? err.message
+          : 'Identifiants incorrects. Veuillez réessayer.',
+      )
     } finally {
       setChargement(false)
     }
