@@ -23,7 +23,7 @@
 }
 
 meter {
-  width: 480px;
+  width: 100%; max-width: 480px;
 }
 
 /* ── Fiche plante ───────────────────────────────────────── */
