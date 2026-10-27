@@ -33,6 +33,43 @@
   color: var(--color-foret);
 }
 
+.header__droite {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Bouton de déconnexion.
+   L'icône (public/icons/logout.svg) est utilisée comme « masque » : seule sa forme compte, et la
+   couleur vient de background-color. Elle suit ainsi la charte (vert forêt) et change au survol,
+   alors que le fichier SVG a une couleur codée en dur (#1f1f1f). */
+.header__logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--color-foret);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.header__logout:hover {
+  color: var(--color-maladie);
+  background-color: var(--color-mousse);
+}
+
+.header__logout-icone {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  -webkit-mask: url('/icons/logout.svg') center / contain no-repeat;
+  mask: url('/icons/logout.svg') center / contain no-repeat;
+}
+
 .header__hamburger {
   display: flex;
   align-items: center;
@@ -99,6 +136,10 @@
 
   .header__hamburger {
     display: none;
+  }
+
+  .header__droite {
+    gap: 1rem;
   }
 
   .header__nav {

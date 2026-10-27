@@ -5,7 +5,8 @@ import Analysis from './pages/Analysis'
 import Result from './pages/Result'
 import History from './pages/History'
 import Profile from './pages/Profile'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { restaurerSession, logout, EVENEMENT_SESSION_TERMINEE } from './services/api'
 import type { User, Analyse } from './types'
 
 // Composant de route protégée — redirige vers /login si non connecté
@@ -23,6 +24,36 @@ function RouteProtegee({
 function App() {
   const [user, setUser] = useState<User | null>(null)
   const [dernierResultat, setDernierResultat] = useState<Analyse | null>(null)
+  // Tant qu'on ne sait pas si un jeton valide existe, on n'affiche rien : sinon une page protégée
+  // renverrait à tort vers /login pendant la vérification.
+  const [sessionVerifiee, setSessionVerifiee] = useState(false)
+
+  // Au démarrage (et à chaque rafraîchissement de la page) : retrouver l'utilisateur connecté.
+  useEffect(() => {
+    restaurerSession()
+      .then(setUser)
+      .finally(() => setSessionVerifiee(true))
+  }, [])
+
+  // Fin de session (jeton refusé par le backend, ou bouton « Se déconnecter ») : on oublie
+  // l'utilisateur ET le dernier résultat (un autre utilisateur ne doit pas le voir), ce qui
+  // renvoie automatiquement vers /login via RouteProtegee.
+  useEffect(() => {
+    const surSessionTerminee = () => {
+      setUser(null)
+      setDernierResultat(null)
+    }
+    window.addEventListener(EVENEMENT_SESSION_TERMINEE, surSessionTerminee)
+    return () => window.removeEventListener(EVENEMENT_SESSION_TERMINEE, surSessionTerminee)
+  }, [])
+
+  if (!sessionVerifiee) {
+    return (
+      <div className="page">
+        <main className="page__main"><p className="page__sous-titre">Chargement…</p></main>
+      </div>
+    )
+  }
 
   return (
     <BrowserRouter>
@@ -49,7 +80,7 @@ function App() {
         }/>
         <Route path="/profil" element={
           <RouteProtegee user={user}>
-            <Profile onLogout={() => setUser(null)} />
+            <Profile onLogout={logout} />
           </RouteProtegee>
         }/>
 

@@ -19,6 +19,7 @@ class Analysis(Base):
     date: Mapped[datetime]
     plant_location: Mapped[Optional[str]] = mapped_column(String(255))
     plant_exposition: Mapped[Optional[str]] = mapped_column(String(255))
+    plant_cultivation: Mapped[Optional[str]] = mapped_column(String(255))
     confidence: Mapped[float] = mapped_column(Float)
 
     id_user: Mapped[int] = mapped_column(ForeignKey("user.id_user", ondelete="CASCADE"))

@@ -1,0 +1,14 @@
+# Dépendances du moteur IA — volontairement SÉPARÉES de celles du backend (conteneur dédié).
+#
+# PyTorch n'est PAS listé ici : la variante CPU (légère) vient d'un index particulier.
+#   - Docker : installé par le Dockerfile
+#   - En local : pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+fastapi==0.141.1
+uvicorn==0.52.1
+python-multipart==0.0.32
+pydantic==2.13.4
+python-dotenv==1.2.2
+pillow==12.3.0
+numpy==2.5.4
+transformers==5.19.0
+sentencepiece==0.2.2

@@ -2,7 +2,8 @@
 
 # Lancer le backend en arrière-plan
 cd backend
-python3 app.py &
+source .venv/bin/activate
+uvicorn main:app --reload &
 BACKEND_PID=$!
 
 # Revenir à la racine puis lancer le frontend
